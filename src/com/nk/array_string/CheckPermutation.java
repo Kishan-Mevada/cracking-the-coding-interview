@@ -10,7 +10,7 @@ import java.util.Map;
 public class CheckPermutation {
 
     /**
-     * 1. Valid the both strings input
+     * 1. Validate the both strings input
      * 2. Convert both strings into char array
      * 3. Sort the both char arrays
      * 4. compare element of both char arrays
@@ -36,7 +36,7 @@ public class CheckPermutation {
     }
 
     /**
-     * 1. Valid the both strings input
+     * 1. Validate the both strings input
      * 2. Put string1 character into map
      * 3. check string2 character in map
      * <p>
