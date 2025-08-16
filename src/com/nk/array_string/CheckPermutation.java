@@ -3,6 +3,7 @@ package com.nk.array_string;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 /**
  * Given two strings, write a method to decide if one is a permutation of the other.
@@ -27,12 +28,16 @@ public class CheckPermutation {
         Arrays.sort(s1CharArray);
         Arrays.sort(s2CharArray);
 
-        for (int i = 0; i < s1.length(); i++) {
+       /* Iterative way
+       for (int i = 0; i < s1.length(); i++) {
             if (s1CharArray[i] != s2CharArray[i]) {
                 return false;
             }
-        }
-        return true;
+        }*/
+
+        return IntStream.range(0, s1.length())
+                .noneMatch(i -> s1CharArray[i] != s2CharArray[i]);
+
     }
 
     /**
@@ -51,13 +56,16 @@ public class CheckPermutation {
             map.put(s1.charAt(i), true);
         }
 
+        /* Iterative
         for (int i = 0; i < s2.length(); i++) {
             if (map.get(s2.charAt(i)) == null) {
                 return false;
             }
-        }
+        }*/
 
-        return true;
+        return IntStream.range(0,s2.length())
+                .noneMatch(i -> map.get(s2.charAt(i)) == null);
+
     }
 
     /**
