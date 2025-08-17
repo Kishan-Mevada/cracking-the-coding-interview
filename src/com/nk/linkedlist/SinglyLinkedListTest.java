@@ -1,4 +1,4 @@
-package com.nk.linkedlist.base;
+package com.nk.linkedlist;
 
 public class SinglyLinkedListTest {
 

@@ -1,15 +1,7 @@
-package com.nk.linkedlist.base;
+package com.nk.linkedlist;
 
 public class SinglyLinkedList {
     Node head;
-
-    public Node getHead() {
-        return head;
-    }
-
-    public void setHead(Node head) {
-        this.head = head;
-    }
 
     public void addFirst(int val) {
         if (head == null) {
@@ -29,6 +21,7 @@ public class SinglyLinkedList {
             while (node.next != null) {
                 node = node.next;
             }
+
             node.next = new Node(val);
         }
     }

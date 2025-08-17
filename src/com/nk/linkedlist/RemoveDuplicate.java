@@ -1,4 +1,4 @@
-package com.nk.linkedlist.base;
+package com.nk.linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +10,7 @@ public class RemoveDuplicate {
 
     // Time: O(N*N), Space: (1)
     public static void removeDups(SinglyLinkedList ll) {
-        Node temp = ll.getHead();
+        Node temp = ll.head;
 
         while (temp != null) {
             int val = temp.val;
